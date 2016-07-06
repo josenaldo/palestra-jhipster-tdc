@@ -1,0 +1,534 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>TDC SP - Trilha java EE - Aplicações Web Modernas com JHipster</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/tdc.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/presentation.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+
+			<div class= "tdc-head-hr">
+				<div class = "tdc-bar-block-1"></div>
+				<div class = "tdc-bar-block-2"></div>
+				<div class = "tdc-bar-block-3"></div>
+				<div class = "tdc-bar-block-4"></div>
+				<div class = "tdc-bar-block-5"></div>
+				<div class = "tdc-bar-block-6"></div>
+			</div>
+
+			<img class="tdc-logo-pequena-img" src="css/theme/img/tdc-logo-pequena.png" />
+
+			<div class="slides">
+
+				<section>
+					<img class="tdc-logo-img" src="css/theme/img/tdc-logo.png" />
+					<h1>Trilha Java EE</h1>
+					<h2>Aplicações Web Modernas com JHipster</h2>
+					<h4>Josenaldo de Oliveira Matos Filho</h4>
+				</section>
+
+				<section>
+                    <h1>Quem somos?</h1>
+                    <img src="images/uaijug-300.png" class="clean-img img-responsive">
+                    <h3>Grupo de usuários Java do Triângulo Mineiro</h3>
+                </section>
+
+				<section>
+					<h1>Java pra Web na Arca de Noé</h1>
+					<p>
+						EJB ou Spring
+					</p>
+					<p>
+						Templates (JSP, JSF, XDoclet, Velocity, Tiles, Thymeleaf)
+					</p>
+					<p>
+						HTML + CSS + JS + JQuery
+					</p>
+				</section>
+
+				<section>
+					<h1>Aplicações web modernas</h1>
+					<p>
+						Usuários estão mais exigentes. Não querem sites lentos e estáticos. Eles querem:
+					</p>
+					<ul>
+						<li>Sites bonitos</li>
+						<li>Não precisar carregar páginas a cada ação</li>
+						<li>Carregar pedaços da página dinamicamente</li>
+					</ul>
+
+					<blockquote >
+						Precisamos usar as últimas tecnologias HTML, CSS e JS
+					</blockquote>
+				</section>
+
+				<section>
+					<h1>Produtividade para desenvolvedores</h1>
+
+					<p>
+						Websites devem ser desenvolvidos rapidamente
+					</p>
+					<p>
+						Esperar 1 minuto para fazer um simples deploy não é mais aceitável
+					</p>
+
+					<blockquote>
+						Precisamos das ferramentas certas para o trabalho
+					</blockquote>
+				</section>
+
+				<section>
+					<h1>Sistemas pronto para produção</h1>
+					<p>
+						Sites que devem aguentar milhares de usuários
+					</p>
+					<p>
+						Diversos clientes acessando o backend através de REST
+					</p>
+					<blockquote>
+						Precisamos de servidores robustos, escaláveis e de alta performance
+					</blockquote>
+				</section>
+
+				<section>
+					<h1>Como resolver esses problemas</h1>
+					<ul>
+						<li>Fronteend com HTML/CSS/Javascript</li>
+						<li>Backend robusto com últimas tecnologias de Java, caching e acesso a dados</li>
+						<li>Tudo configurado automaticamente, com performance em mente</li>
+						<li>Ferramentas adequadas para otimizar o desenvolvimento</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="subtitle">Client-side technologies</h1>
+					<h2 class="subtitle">YEOMAN, GULP, BOWER, ANGULARJS, BOOTSTRAP</h2>
+				</section>
+
+				<section>
+                    <h1>Yeoman</h1>
+                    <h3>Geração de esqueleto de aplicação</h3>
+                    <ul>
+                        <li>Centenas de geradores disponíveis</li>
+                        <li>A maioria é orientado a aplicaçoes frontend javascript</li>
+                        <li>Os melhor avaliados são de ótima qualidade</li>
+                    </ul>
+                    <pre><code data-trim>yo jhipster</code></pre>
+                </section>
+
+                <section>
+                    <h1>Gulp</h1>
+                    <h3>Automação de tarefas com JavaScript</h3>
+                    <ul>
+						<li>No desenvolvimento, ele permite o "live reloading", roda tests em background... </li>
+						<li>Para produção, comprime e otimiza recursos, compila sass, atualiza referências...</li>
+                    </ul>
+                    <pre><code data-trim>gulp test</code></pre>
+                </section>
+
+                <section>
+                    <h1>Bower</h1>
+                    <h3>Gerenciador de dependências javascript</h3>
+                    <ul>
+						<li>Permite buscar, instalar e atualizar bibliotecas javascript</li>
+                        <li>Milhares de bibliotecas</li>
+                    </ul>
+                    <pre><code data-trim>bower install angular</code></pre>
+                </section>
+
+                <section>
+                    <h1>Karma</h1>
+                    <h3>Execução de testes unitários no javascript</h3>
+                    <ul>
+                        <li>Funciona com <strong>Phantom.js</strong>, um navegador sem UI</li>
+                        <li>É <strong>muito</strong> rápido, e pode rodar continuamente em background</li>
+                    </ul>
+                    <pre><code data-trim >karma start src/test/javascript/karma.conf.js</code></pre>
+                </section>
+
+                <section>
+                    <h1>AngularJS</h1>
+                    <h3>O framework MVVM mais popular no frontend</h3>
+                    <ul>
+                        <li>Poderoso &amp; fácil de aprender</li>
+                        <li>Data binding, form validation, i18n... tudo out of the box</li>
+                    </ul>
+                    <pre><code data-trim>
+&lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;
+&lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Twitter Bootstrap</h1>
+                    <h3>Framework CSS/JavaScript para Web apps responsivas</h3>
+                    <ul>
+						<li>CSS e elementos HTML para os casos mais comuns</li>
+						<li>Um montão de componentes: menus, navbars, drop-down, alertas, formulários...</li>
+                        <li>Qualquer programador faz algo bonito com o Bootstrap</li>
+                    </ul>
+                    <pre><code data-trim>
+&lt;div class=&quot;alert alert-success&quot;&gt;
+&Tab;&lt;strong&gt;Hello, world!&lt;/strong&gt;
+&lt;/div&gt;
+                    </code></pre>
+                </section>
+
+				<section>
+					<h1 class="subtitle">Server-side technologies</h1>
+					<h2 class="subtitle">MAVEN, SPRING, SPRING MVC REST, SPRING DATA JPA, NETFLIX OSS</h2>
+				</section>
+
+				<section>
+                    <h1>Maven | Gradle</h1>
+                    <h3>Build e gestão de dependência</h3>
+                    <ul>
+						<li>Estrutura de diretórios e tarefas padronizados</li>
+                        <li>Integração com as maiores IDEs</li>
+						<li>Ecossistema de plugins rico e maduro</li>
+                    </ul>
+                    <pre><code data-trim>./mvnw spring-boot:run</code></pre>
+
+					<pre><code data-trim>./gradlew bootRun</code></pre>
+                </section>
+
+                <section>
+                    <h1>Spring Boot</h1>
+                    <h3>Padrão de-facto para criação de Java apps</h3>
+                    <ul>
+                        <li>IoC, AOP e diversas abstrações pra facilitar o desenvolvimento</li>
+                        <li>Rápidi, leve e extremamente poderoso</li>
+                        <li>Configuração por convenção com Spring Boot</li>
+                    </ul>
+                    <pre><code data-trim >
+@Service
+@Transactional
+public class UserService {
+
+	@Inject
+	private UserRepository userRepository;
+
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Liquibase</h1>
+                    <h3>Evolução do banco de dados</h3>
+                    <ul>
+                        <li>Evolução do banco scriptada e reprodutível</li>
+                        <li>Funciona bem com Spring e JPA</li>
+                        <li>Exige bom entendimento de banco de dados e ORM</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>JPA</h1>
+                    <h3>Mapeamento Objeto Relacional padrão para Java</h3>
+                    <ul>
+                        <li>Hibernate é a implementação escolhida</li>
+                        <li>Framework completo de acesso a dados</li>
+                        <li>Complexo para noobs</li>
+                    </ul>
+                    <pre><code data-trim>
+@Entity
+public class User implements Serializable {
+
+	@Id
+	private String login;
+
+}
+                	</code></pre>
+                </section>
+
+                <section>
+                    <h1>Spring Data JPA</h1>
+                    <h3>Adds extra syntaxic sugar on top of JPA</h3>
+                    <ul>
+                        <li>Generates your JPA repositories <strong>automatically</strong></li>
+                        <li>Removes a lot of boilerplate code</li>
+                    </ul>
+                    <pre><code data-trim>
+public interface PersistenceAuditEventRepository extends JpaRepository&lt;PersistentAuditEvent, String&gt; {
+
+List&lt;PersistentAuditEvent&gt;
+    findByPrincipalAndAuditEventDateGreaterThan(String principal, LocalDateTime after);
+
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>MongoDB</h1>
+                    <h3>Escalabilidade com NOSQL</h3>
+                    <ul>
+                        <li>Alternativa aos bancos relacionais e ao JPA</li>
+                        <li>Similaridade: Spring Data MongoDB parecido com Spring Data JPA</li>
+                        <li>Escalável e fácil de usar</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Cassandra</h1>
+                    <h3>Escalabilidade com NOSQL</h3>
+                    <ul>
+						<li>2a. Alternativa aos bancos relacionais e ao JPA</li>
+                        <li>Escalabilidade Linear e alta disponibilidade</li>
+                        <li>Performance extrema e baixa latência para aplicações de missão crítica</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Caching</h1>
+                    <h3>Caching é sinônimo de performance</h3>
+                    <ul>
+                        <li>Ehcache é a soliução mais usada</li>
+                        <li>HazelCast é a alternativa para cache clusterizado</li>
+                        <li>Hibernate 2nd level cache ou Spring Caching</li>
+                    </ul>
+                    <pre><code data-trim>
+@Entity
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+public class User implements Serializable {
+
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Spring Security</h1>
+                    <h3>Segurança à prova de balas</h3>
+                    <ul>
+                        <li>Framework líder de mercado, usado em todo tipo de aplicação</li>
+                        <li>Segurança aplicada a URLs e a código Java (Spring Beans)</li>
+                        <li>Trabalha com arquiteturas stateful (cookies) e stateless (OAuth2/JWT)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Spring MVC REST</h1>
+                    <h3>O melhor framework REST em Java</h3>
+                    <ul>
+                        <li>Solução completa de alta performance para REST</li>
+                        <li>Fácil de usar com Spring, fácil de testar</li>
+                    </ul>
+                    <pre><code data-trim>
+@RestController
+public class AccountResource {
+	@RequestMapping(value = "/app/rest/account",
+		method = RequestMethod.POST)
+	public void saveAccount(@RequestBody UserDTO userDTO) {
+	    userService.updateUserInformation(userDTO);
+	}
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Thymeleaf</h1>
+                    <h3>Server-side templates</h3>
+                    <ul>
+                        <li>Used quando uma Single Web Page Application não é suficiente</li>
+                        <li>Substitui JSPs e JSTLs,os quais estão datados e depreciados</li>
+                        <li>Template engine poderosa e fácil de usar por  Web designers</li>
+                    </ul>
+                    <pre><code data-trim >&lt;h1 th:text=&quot;#{title}&quot;&gt;Hello, world&lt;/h1&gt;</code></pre>
+                </section>
+
+                <section>
+                    <h1>Monitoramento</h1>
+                    <h3>Pronto pra produção com Metrics</h3>
+                    <ul>
+                        <li>Monitore a JVM, o servidor de aplicação, Spring beans, cache e muito mais!</li>
+                        <li>Relatórios com JMX ou Graphite</li>
+                    </ul>
+                    <pre><code data-trim>
+@Timed
+public void saveAccount(@RequestBody UserDTO userDTO) {
+	userService.updateUserInformation(userDTO);
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Implantação nas nuvens</h1>
+                    <h3>Para o alto e além</h3>
+                    <ul>
+						<li>A implantação da aplicação na nuvem é bastante facilitada</li>
+						<li>Ferramentas pra deploy na AWS, Heroku e Cloud Foundry</li>
+                    </ul>
+                </section>
+
+				<section>
+					<h1 class="subtitle">Porque usar JHipster</h1>
+					<h2 class="subtitle">SERÁ QUE É APENAS HYPE?</h2>
+				</section>
+
+				<section>
+                    <h1>Você disse <strong>hype</strong>?</h1>
+                    <p>Estatísticas de maio de 2016</p>
+                    <ul>
+                        <li>223 contribuintes, incluindo 13 core members</li>
+                        <li>4,210 GitHub stars e 928 forks</li>
+                        <li>220,000 instalações</li>
+                        <li>E crescendo rapidamente!</li>
+                    </ul>
+                    <hr/>
+                    <h3>Porque?</h3>
+                </section>
+
+                <section>
+                    <h2>Um monte de tecnologias legais, mas...</h2>
+                    <ul>
+                        <li>Gulp e Maven podem ser amigos?</li>
+                        <li>AngularJS e Spring MVC REST podem ser amigos?</li>
+                        <li>Netflix OSS e Spring podem ser amigos?</li>
+                        <li>Colocar tudo funcionando junto, suavemente, com segurança, cache, monitoramento, não é moleza...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>JHipster põe tudo pra funcionar junto</h2>
+                    <ul>
+                        <li>JHipster cria uma aplicação completa com todas essas tecnologias e ferramentas</li>
+                        <li>As coisas simplesmente funcionam out-of-the-box</li>
+                        <li>Temos o workflow do Gulp totalmente integrado nas goals do Maven</li>
+                        <li>Temos o Docker configurado pra rodar tudo na boa</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>E ainda tem mais!</h2>
+                    <ul>
+                        <li><strong>"entity"</strong>: subgerador que gera uma entidade JPA completa, do banco de dados até o Angular</li>
+                        <li><strong>"import-jdl"</strong>: subgerador que gera u modelo de entidades complexo usando <a href="https://jhipster.github.io/jdl-studio/" target="_blank">JDL Studio</a></li>
+                        <li><strong>"service"</strong> subgerador que gera um Spring business service</li>
+                        <li><strong>"languages"</strong> subgerador que adiciona um novo idioma para o i18n</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>E ainda tem mais!</h2>
+                    <ul>
+                        <li>Ótimo suporte para criar microservices e gateways</li>
+                        <li>JHipster Registry (Netflix Eureka + Spring cloud config server) fornecido out-of-the-box</li>
+                        <li>JHipster Console com ELK (Elasticsearch + Logstash + Kibana) fornecido out-of-the-box</li>
+                        <li>Suporte ao Docker</li>
+                        <li>Módulos adicionais: <a href="https://jhipster.github.io/modules/marketplace/" target="_blank">https://jhipster.github.io/modules/marketplace/</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Pronto pra rodar</h2>
+                    <ul>
+                        <li>GZipping e HTTP caching headers</li>
+                        <li>Otimização e minificação do JavaScript e CSS com o Gulp</li>
+                        <li>Executável standalone ou arquivo WAR padrão, com monitoramento habilitado</li>
+                        <li>Subgeradores para deploy automático no Cloud Foundry, Heroku e AWS</li>
+                        <li><strong>"docker-compose"</strong>: subgerador que gera a configuração do Docker para fazer deploy de microservices</li>
+                    </ul>
+                </section>
+
+				<section>
+					<h1 class="subtitle">Hello World</h1>
+					<h2 class="subtitle">TUTORIAL 10 MINUTOS</h2>
+				</section>
+
+				<section>
+                    <h1>Instalação</h1>
+                    <pre><code data-trim>
+npm install -g yo
+npm install -g generator-jhipster
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Crie uma aplicação</h1>
+                    <p>E use o maven pra executar<br>
+                        <strong>(hot reload automático)</strong>
+                    </p>
+                    <pre><code data-trim>
+yo jhipster
+./mvnw
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Client-side live reload</h1>
+                    <p>
+                        Live reload co código do frontend (HTML, CSS, JavaScript) graças ao Gulp e Browsersync.
+                  	</p>
+				 	<p>
+				  		Edita &gt; Salva &gt; Navegador atualiza automaticamente
+				  	</p>
+                	<pre><code data-trim>gulp</code></pre>
+                </section>
+
+                <section>
+                    <h1>Adicionaruma entidade</h1>
+                    <pre><code data-trim >yo jhipster:entity Foo</code></pre>
+                </section>
+
+                <section>
+                    <h1>Rodar em modo de produção</h1>
+                    <p><strong>(Rodando o banco no docker)</strong></p>
+                    <pre><code data-trim>
+./mvnw -Pprod package
+docker-compose -f src/main/docker/mysql.yml up -d
+java -jar target/*.war --spring.profiles.active=prod
+                    </code></pre>
+                </section>
+
+				<section>
+                    <h1>Perguntas?</h1>
+					<h3><a href="https://github.com/josenaldo"> <i class="fa fa-github-square"></i> github.com/josenaldo</a></h3>
+                    <h3><a href="mailto:josenaldo@gmail.com"><i class="fa fa-envelope-o"></i> josenaldo@gmail.com</a></h3>
+                    <h3><a href="http://twitter.com/josenaldomatos"><i class="fa fa-twitter-square"></i> @josenaldomatos</a></h3>
+                </section>
+
+			</div>
+
+			<img class="global-code-img" src="css/theme/img/global-code-logo.png" />
+
+			<div class="mouse-controls">
+				<i class="mouse-status" data-on="fa fa-circle" data-off="fa fa-circle-o"></i>
+			</div>
+			<div class= "tdc-foot-hr">
+				<div class = "tdc-bar-block-1"></div>
+				<div class = "tdc-bar-block-2"></div>
+				<div class = "tdc-bar-block-3"></div>
+				<div class = "tdc-bar-block-4"></div>
+				<div class = "tdc-bar-block-5"></div>
+				<div class = "tdc-bar-block-6"></div>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js" charset="utf-8"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+		<script src="js/reveal.js" charset="utf-8"></script>
+		<script src="js/init.js" charset="utf-8"></script>
+		<!-- <script src="js/ga.js" charset="utf-8"></script> -->
+	</body>
+</html>
